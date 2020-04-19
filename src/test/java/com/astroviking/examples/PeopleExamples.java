@@ -10,7 +10,7 @@ public class PeopleExamples {
   @Test
   public void filterPersonByAge() {
     PersonLoader.getPeople().stream()
-        .filter(person -> person.getAge() <= 18)  // Filter age <= 18
+        .filter(person -> person.getAge() <= 18) // Filter age <= 18
         .limit(10) // Gather first 10 people
         .collect(Collectors.toList()) // Collect to list
         .forEach(System.out::println);
