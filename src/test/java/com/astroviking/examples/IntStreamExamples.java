@@ -1,7 +1,7 @@
 package com.astroviking.examples;
 
 import com.astroviking.domain.Person;
-import com.astroviking.loader.PersonLoader;
+import com.astroviking.data.MockData;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -23,7 +23,7 @@ public class IntStreamExamples {
 
   @Test
   public void intStreamPeople() {
-    List<Person> people = PersonLoader.getPeople();
+    List<Person> people = MockData.getPeople();
     IntStream.range(0, people.size()).forEach(index -> System.out.println(people.get(index)));
   }
 
